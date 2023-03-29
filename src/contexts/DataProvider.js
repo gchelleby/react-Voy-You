@@ -26,20 +26,15 @@ export const DataProvider = function(props) {
     }, [])
 
     async function getPost(uid, id) {
-        // Get a reference to our document
         const docRef = doc(db, 'users', uid, 'posts', id)
-
-        // Get a snapshot of information based on our reference
         const docSnap = await getDoc(docRef)
 
         if (!docSnap.exists()) {
-            // Throw an error, so that the catch is triggered in PostSingle
             throw new Error
         }
         
         return docSnap.data()
     }
-
     async function addPost(title, body) {
         const newPost = {
             title,
@@ -47,16 +42,12 @@ export const DataProvider = function(props) {
             dateCreated: Timestamp.now(),
             username: user.displayName
         }
-
         const docRef = await addDoc(collection(db, 'users', user.uid, 'posts'), newPost)
-
         newPost.id = docRef.id
-
         setPosts([
             newPost,
             ...posts
         ])
-
         return newPost
     }
 

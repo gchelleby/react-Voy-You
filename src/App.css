@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Quicksand:wght@600&display=swap');
+
 /* 
 Start Global Styling
 */
@@ -17,8 +19,8 @@ body {
   top: 0;
   padding: 0;
   margin: 0;
-  /* position: fixed; */
   width: 100%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .navbar li {
@@ -53,6 +55,7 @@ a:hover,
   padding-top: 5px;
   margin-left: 30%;
   font-size: 87%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .signin {
@@ -60,6 +63,7 @@ a:hover,
   margin-left: 58%;
   font-size: 90%;
 }
+
 #footer {
   display: inline-block;
 }
@@ -68,13 +72,14 @@ a:hover,
   display: flex;
   justify-content: space-around;
   background-color: #21254a;
-  padding: 20;
+  padding: 13;
   margin: 0;
   width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .footbar li {
@@ -88,9 +93,9 @@ a:hover,
 }
 
 .mtns {
-  width: 150px;
-  height: 90px;
-  padding-top: 10px;
+  width: 130px;
+  height: 80px;
+  padding-top: 8px;
 }
 
 /* 
@@ -134,40 +139,47 @@ Start Home Styling
 Stop Home Styling
 */
 /* 
-Start Chat Styling
-*/
-
-
-
-
-/* 
-Stop Chat Styling
-*/
-/* 
 Start Message Board Styling
 */
+/* .msg-brd */
+
+/* .btn-card */
+
+
+
+/* 
+Stop Message Board Styling
+*/
+/* 
+Start Create Post Styling
+*/
 .input-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .bodybox {
   display: inline-block;
   border: black 1.5px solid;
+  font-family: 'Dosis', sans-serif;
 }
-.titlebox{
+
+.titlebox {
   display: inline-block;
   border: black 1.5px solid;
   margin: 15px;
   width: 500px;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
+
 .post-button {
   width: 500px;
 }
 
 
 /* 
-Stop Message Board Styling
+Stop Create Post Styling
 */
 /* 
 Start Map Styling

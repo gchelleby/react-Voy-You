@@ -7,7 +7,7 @@ export const AuthProvider = function (props) {
     const [user, setUser] = useState({
         loggedIn: false
     })
-
+    console.log(user)
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
 
