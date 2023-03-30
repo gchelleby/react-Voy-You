@@ -10,14 +10,18 @@ export default function Board() {
 
     return (
         <div>
-            <h1 className="msg-brd">Message Board</h1>
-            <div className="btn-card">
-                {
-                    (user.loggedIn) ?
-                        <Link to="/createpost"><button className="postbtn">Create Post</button></Link>:
-                        <Link to="/signin"><button className="postbtn">Create Post</button></Link>
-                }
-
+            <h1 className="msg-brd">Discussion</h1>
+            <div className="btns-container">
+                <div className="btn-card">
+                    {
+                        (user.loggedIn) ?
+                            <Link to="/createpost"><button className="postbtn">Create Post...</button></Link> :
+                            <Link to="/signin"><button className="postbtn">Create Post...</button></Link>
+                    }
+                </div>
+                <div className="adventure-card">
+                    <Link to="/plan"><button className="adventure">Plan Your Next Adventure!</button></Link>
+                </div>
             </div>
             {posts.map((post) => <Post post={post} key={post.id} />)}
 

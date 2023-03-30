@@ -19,13 +19,10 @@ export default function Navbar() {
               (user.loggedIn) ?
                 <>
                   <li>
-                    <Link to="/privMessages">Chat</Link>
-                  </li>
-                  <li>
                     <Link to="/board">Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/map">Plan</Link>
+                    <Link to="/plan">Plan</Link>
                   </li>
                   <button className="navbtn" onClick={logout}>Log Out</button>
                 </> :

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Quicksand:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Handlee&family=Quicksand:wght@600&family=Righteous&display=swap');
 /* 
 Start Global Styling
 */
@@ -141,11 +140,86 @@ Stop Home Styling
 /* 
 Start Message Board Styling
 */
-/* .msg-brd */
+.msg-brd {
+  font-size: 30px;
+  font-family: 'Handlee', cursive;
+  text-align: center;
+  margin: 20px auto 0;
+  border-bottom: 1px solid #21254a;
+  width: 40%;
+}
+.btns-container {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-card {
+  background: url('./mtns2.png') no-repeat;
+  background-size: cover;
+  /* border: 1px solid white; */
+  height: 4em;
+  width: 20em;
+  margin: 15px 10px 40px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 2px;
+}
+.postbtn {
+  height: 3em;
+  width: 18em;
+  background-color: white;
+  border: 1px solid gray;
+  color: grey;
+  padding: 0px;
+  text-align: left;
+  margin: 12px;
+}
+.adventure-card {
+  background: url('./alaska.jpeg') no-repeat;
+  background-size: cover;
+  /* border: 1px solid white; */
+  height: 4em;
+  width: 20em;
+  margin: 15px 10px 40px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adventure {
+  height: 2em;
+  width: 13em;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  font-family: 'Righteous', cursive;
+  font-size: 25px;
+  text-shadow: 3px 3px black;
+}
+.view-post {
+  border: 1px solid rgba(128, 128, 128, 0.451);
+  width: 45rem;
+  border-radius: 15%;
+  padding-left: 20px;
+  margin: 20px auto 20px 20px;
+}
+.view-post h3 {
+  margin: 10px 10px 0px;
+}
+.expand-btn {
+  background-color: transparent;
+  border: transparent;
+  color: #8691F2;
+  font-size: 87%;
+  font-family: 'Quicksand', sans-serif;
+  height: 15px;
+  width: 6em;
+  padding: 0px;
+  margin: 0px 10px;
+}
 
-/* .btn-card */
-
-
+.expand-btn:hover {
+  color: #21254a;
+}
 
 /* 
 Stop Message Board Styling

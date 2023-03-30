@@ -1,19 +1,24 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Post(props) {
-    console.log(props)
+    const [show, setShow] = useState()
     return (
-        <div className="post">
+        <div className="view-post">
             <h3>{props.post.title}</h3>
-            <p>{props.post.body}</p>
-            <p>{props.post.dateCreated?.toDate().toString()}</p> {/* Optional Chaining! */}
-            <p>Posted By: {props.post.username}</p>
-            
-            {
-                (props.hideLink) ?
-                <></> :
-                <Link to={ `/post/${props.post.uid}/${props.post.id}` }>Read More</Link>
-            }
+            <div onClick={() => setShow(currentShow => !currentShow)}>
+                <button className='expand-btn'>Expand Post</button>
+                {show ?
+                    <div>
+                        <p>{props.post.body}</p>
+                        <p>{props.post.dateCreated?.toDate().toString()}</p>
+                        <p>Posted By: {props.post.username}</p>
+                    </div>
+                    :
+                    null
+                }
+
+            </div>
         </div>
     )
 }

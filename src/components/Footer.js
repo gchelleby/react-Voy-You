@@ -13,13 +13,10 @@ export default function Footer() {
                     <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                    <Link to="/privMessages">Chat</Link>
-                </li>
-                <li>
                     <Link to="/board">Forum</Link>
                 </li>
                 <li>
-                    <Link to="/map">Plan</Link>
+                    <Link to="/plan">Plan</Link>
                 </li>
             </ul>
         </div>
