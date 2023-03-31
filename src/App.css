@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Handlee&family=Quicksand:wght@600&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Handlee&family=Quicksand:wght@600&family=Righteous&family=Shalimar&display=swap');
+@import url('https://cdn.maptiler.com/sdk-js/latest/maptiler-sdk.css');
+
 /* 
 Start Global Styling
 */
 body {
   min-height: 100%;
   margin-bottom: 100px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 * {
@@ -52,7 +57,7 @@ a:hover,
   border: transparent;
   color: white;
   padding-top: 5px;
-  margin-left: 30%;
+  margin-left: 40%;
   font-size: 87%;
   font-family: 'Quicksand', sans-serif;
 }
@@ -64,7 +69,7 @@ a:hover,
 }
 
 #footer {
-  display: inline-block;
+  display: flex;
 }
 
 .footbar {
@@ -74,7 +79,7 @@ a:hover,
   padding: 13;
   margin: 0;
   width: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   right: 0;
@@ -103,24 +108,45 @@ Stop Global Styling
 /* 
 Start Sign Up styling
 */
-.googlebtn {
-  border: transparent;
-  background-color: hsla(0, 0%, 0%, 0);
-  width: 0%;
-  height: auto;
-  border-radius: 60%;
-  margin: 15% 35% auto auto;
+.bg-color {
+  background-color: #ce858a88;
 }
 
 .signupbg {
-  background: url('./nrg.jpg') no-repeat;
-  background-size: cover;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
 }
 
-.full-screen {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.googlebtn {
+  width: 90px;
+  height: auto;
+}
+
+.google-card {
+  border: 1px solid gray;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  padding: 30px;
+  border-radius: 20%;
+}
+
+.signin-text {
+  margin-bottom: 40px;
+}
+
+.quote {
+  text-align: center;
+  border-bottom: black 1px solid;
+  width: 900px;
+  font-size: 50px;
+  font-family: 'Shalimar', cursive;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 /* 
@@ -129,10 +155,77 @@ Stop Sign Up styling
 /* 
 Start Home Styling
 */
+.hero {
+  position: relative;
+  text-align: start;
+}
 
+.hero-text {
+  position: absolute;
+  top: 20%;
+  bottom: 50%;
+  left: 3%;
+  color: white;
+  text-shadow: 2.5px 2.5px rgba(0, 0, 0, 0.724);
+}
 
+.sunset-gifparent {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
 
+.sunset-gif {
+  margin: 0;
+  width: 100%;
+  height: 450px;
+  -webkit-mask-image: -webkit-gradient(linear, left, right, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
 
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+
+.left-pic {
+  background: url('./sunset2.jpeg') no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 197px;
+  border: 1px solid black;
+  border-radius: 7%;
+  margin-right: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.right-pic {
+  background: url('./plane.jpeg') no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 197px;
+  border: 1px solid black;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+}
+.bonvoyage {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 17px;
+}
+
+.btn-no-back {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  margin-top: 65px;
+  font-size: 25px;
+  text-shadow: 3px 3px #ce858a;
+}
 
 /* 
 Stop Home Styling
@@ -148,10 +241,12 @@ Start Message Board Styling
   border-bottom: 1px solid #21254a;
   width: 40%;
 }
+
 .btns-container {
   display: flex;
   justify-content: space-around;
 }
+
 .btn-card {
   background: url('./mtns2.png') no-repeat;
   background-size: cover;
@@ -162,6 +257,7 @@ Start Message Board Styling
   border-radius: 4px;
   box-shadow: 1px 1px 5px 2px;
 }
+
 .postbtn {
   height: 3em;
   width: 18em;
@@ -172,6 +268,7 @@ Start Message Board Styling
   text-align: left;
   margin: 12px;
 }
+
 .adventure-card {
   background: url('./alaska.jpeg') no-repeat;
   background-size: cover;
@@ -185,6 +282,7 @@ Start Message Board Styling
   align-items: center;
   justify-content: center;
 }
+
 .adventure {
   height: 2em;
   width: 13em;
@@ -195,16 +293,26 @@ Start Message Board Styling
   font-size: 25px;
   text-shadow: 3px 3px black;
 }
+
 .view-post {
   border: 1px solid rgba(128, 128, 128, 0.451);
-  width: 45rem;
-  border-radius: 15%;
+  width: 20rem;
   padding-left: 20px;
-  margin: 20px auto 20px 20px;
+  margin: 30px;
+  background-color: #85acce3e;
+  
 }
+.postcard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .view-post h3 {
   margin: 10px 10px 0px;
 }
+
 .expand-btn {
   background-color: transparent;
   border: transparent;
@@ -215,6 +323,10 @@ Start Message Board Styling
   width: 6em;
   padding: 0px;
   margin: 0px 10px;
+}
+
+.expanded {
+  width: 45rem;
 }
 
 .expand-btn:hover {
@@ -230,13 +342,16 @@ Start Create Post Styling
 .input-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .bodybox {
   display: inline-block;
   border: black 1.5px solid;
   font-family: 'Dosis', sans-serif;
+  resize: none;
+  border-radius: 4%;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 .titlebox {
@@ -245,12 +360,18 @@ Start Create Post Styling
   margin: 15px;
   width: 500px;
   font-family: 'Edu NSW ACT Foundation', cursive;
+  border-radius: 4%;
 }
 
 .post-button {
-  width: 500px;
+  width: 200px;
+  margin: 20px;
+  color:rgba(0, 0, 0, 1);
 }
-
+.create-h1 {
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  margin-top: 0px;
+}
 
 /* 
 Stop Create Post Styling
@@ -258,9 +379,33 @@ Stop Create Post Styling
 /* 
 Start Map Styling
 */
+map-body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+map-code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
+.map-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 77px);
+  /* calculate height of the screen minus the heading */
+}
 
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 /* 
 Stop Map Styling
@@ -268,10 +413,9 @@ Stop Map Styling
 /* 
 Start Contact Styling
 */
-
-
-
-
+.push-down {
+  margin-top: 158px;
+}
 /* 
 Stop Contact Styling
 */

@@ -7,7 +7,6 @@ export const DataProvider = function(props) {
     const [posts, setPosts] = useState([])
     const { user } = useContext(AuthContext)
     const db = getFirestore()
-    console.log(posts)
     useEffect(() => {
         async function getPosts() {
             const postQuery = query(collectionGroup(db, 'posts'))

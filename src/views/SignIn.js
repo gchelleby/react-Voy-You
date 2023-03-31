@@ -6,12 +6,13 @@ import google from '../google.png'
 export default function SignIn() {
     const { user, login } = useContext(AuthContext)
     return (
-        <div className='signupbg full-screen'>
+        <div className='signupbg'>
             {
                 (!user.loggedIn) ?
                     <>
-                        <div style={{ textAlign: 'center' }}>
-                            <button className="googlebtn"><img src={google} alt="Google Sign Up Button" onClick={login} /></button>
+                        <div className="google-card" onClick={ login }>
+                            <h1 className="signin-text">Sign in with your Google account!</h1>
+                            <img className='googlebtn' src={ google } />
                         </div>
                     </> :
                     <>

@@ -23,8 +23,9 @@ export default function Board() {
                     <Link to="/plan"><button className="adventure">Plan Your Next Adventure!</button></Link>
                 </div>
             </div>
-            {posts.map((post) => <Post post={post} key={post.id} />)}
-
+            <div className="postcard">
+                {posts.map((post) => <Post post={post} key={post.id} />)}
+            </div>
         </div>
     )
 }

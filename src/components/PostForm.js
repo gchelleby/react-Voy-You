@@ -30,13 +30,13 @@ export default function PostForm() {
                 placeholder="What's on your mind?"
                     name="body" 
                     id="body" 
-                    cols="30" 
-                    rows="10"
+                    cols="100" 
+                    rows="15"
                     onChange={(e) => setBody(e.target.value)}
                     value={body}
                 ></textarea>
             </div>
-            <button className='post-button'>Add Post</button>
+            <button className='post-button btn-no-back'>Add Post</button>
         </form>
     )
 }

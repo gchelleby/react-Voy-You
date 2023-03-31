@@ -7,7 +7,6 @@ export const AuthProvider = function (props) {
     const [user, setUser] = useState({
         loggedIn: false
     })
-    console.log(user)
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
 
@@ -17,7 +16,6 @@ export const AuthProvider = function (props) {
 
     async function logout() {
         const result = await signOut(auth)
-        console.log(result)
     }
 
     useEffect(() => {
