@@ -10,7 +10,7 @@ export default function Contact() {
                 <li>example@example.com</li>
                 <li>555-555-5555</li>
             </ul>
-            <div className="push-down"></div>
+            <div className="push-down"><p>.</p></div>
         </div>
     )
 }
