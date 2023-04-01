@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../contexts/AuthProvider';
 
 export default function Plan() {
-    const { user, login } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     return (
         <div>
             {

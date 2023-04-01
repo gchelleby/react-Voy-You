@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import MapForm from './MapForm';
 
 export default function Map() {
     const mapContainer = useRef(null);
@@ -19,11 +20,16 @@ export default function Map() {
             zoom: zoom
         });
         map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
-
+        // const marker = new maplibregl.Marker({ color: "#FF0000" })
+        // .setLngLat([139.7525, 35.6846])
+        // .addTo(map.current);
     });
     return (
-        <div className="map-wrap map-body map-code">
-            <div ref={mapContainer} className="map" />
+        <div className='map-page-container'>
+            <div className="map-wrap map-body map-code">
+                <div ref={mapContainer} className="map" />
+            </div>
+            <MapForm />
         </div>
     )
 }
